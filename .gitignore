@@ -1,0 +1,33 @@
+# Android Studio
+.idea/
+*.iml
+
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Local SDK configuration
+local.properties
+
+# Signing / secrets
+*.jks
+*.keystore
+serviceAccountKey.json
+
+# Firebase local files
+.firebase/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AI/editor local config
+.agents/
+.claude/

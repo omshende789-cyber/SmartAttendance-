@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7FB"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingTop="24dp"
+    android:paddingEnd="20dp">
+
+    <!-- ==================================================
+         HEADER
+         ================================================== -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Students"
+        android:textColor="#111827"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="View all registered students in the attendance system."
+        android:textColor="#6B7280"
+        android:textSize="13sp" />
+
+    <!-- ==================================================
+         COUNT
+         ================================================== -->
+
+    <TextView
+        android:id="@+id/tvStudentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="0 students"
+        android:textColor="#2563EB"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <!-- ==================================================
+         SEARCH
+         ================================================== -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Search students"
+        app:boxCornerRadiusBottomEnd="14dp"
+        app:boxCornerRadiusBottomStart="14dp"
+        app:boxCornerRadiusTopEnd="14dp"
+        app:boxCornerRadiusTopStart="14dp"
+        app:startIconDrawable="@android:drawable/ic_menu_search">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchStudents"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#111827"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- ==================================================
+         LOADING
+         ================================================== -->
+
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+
+    <!-- ==================================================
+         EMPTY STATE
+         ================================================== -->
+
+    <TextView
+        android:id="@+id/tvEmptyStudents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="No students found."
+        android:textColor="#6B7280"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <!-- ==================================================
+         STUDENT LIST
+         ================================================== -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerStudents"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="2dp"
+        android:paddingBottom="20dp"
+        android:scrollbars="none" />
+
+</LinearLayout>
